@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif, Arial;
   }
   h1 {
     @apply text-3xl font-bold
