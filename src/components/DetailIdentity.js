@@ -27,7 +27,7 @@ const DetailIdentity = () => (
         <tr>
           <th className="align-top">Address</th>
           <td className="px-2 align-top">:</td>
-          <td>Jl. Gn. Guntur III No. 015 Perumnas Cirebon</td>
+          <td>Cirebon, West Java</td>
         </tr>
         <tr>
           <th>Blog</th>
