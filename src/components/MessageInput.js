@@ -10,6 +10,7 @@ class MessageInput extends React.Component {
       email: '',
       message: ''
     }
+    this.formRef = React.createRef()
 
     this.onNameChangeEventHandler = this.onNameChangeEventHandler.bind(this)
     this.onEmailChangeEventHandler = this.onEmailChangeEventHandler.bind(this)
@@ -59,8 +60,8 @@ class MessageInput extends React.Component {
       }
     })
     const scriptUrl = `${process.env.REACT_APP_MAILING_LIST_API_KEY}`
-    const form = document.forms['submit-to-google-sheet']
-    fetch(scriptUrl, { method: 'POST', body: new FormData(form) })
+    // const form = document.forms['submit-to-google-sheet']
+    fetch(scriptUrl, { method: 'POST', body: new FormData(this.formRef.current) })
       .then(response => Swal.fire('Message Sent!', `${response.statusText}`, 'success'))
       .catch(error => Swal.fire('Send Failed!', `${error.message}`, 'error'))
   }
@@ -91,7 +92,8 @@ class MessageInput extends React.Component {
     return (
       <div className="message-input tablet:max-w-xl tablet:mx-auto border border-blue-900 rounded-lg m-4 p-4 bg-gray-100 phone:m-2 phone:mt-4 phone:max-w-full">
         <h3>Message Me:</h3>
-        <form name="submit-to-google-sheet" onSubmit={this.onSubmitEventHandler}>
+        <form name="submit-to-google-sheet" method="post" ref={this.formRef} onSubmit={this.onSubmitEventHandler}>
+          <input type="hidden" value={this.state.date} required/>
           <input
             className="input-name w-full p-1 border border-blue-500 rounded-lg mt-2 mb-1"
             type="text"
