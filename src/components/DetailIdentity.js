@@ -32,7 +32,7 @@ const DetailIdentity = () => (
         <tr>
           <th>Blog</th>
           <td className="px-2">:</td>
-          <td><a className="underline hover:text-blue-500 visited:text-purple-900" href="http://vidi005.blogspot.com">http://vidi005.blogspot.com</a></td>
+          <td><a className="underline hover:text-blue-500 visited:text-purple-900 break-all" href="http://vidi005.blogspot.com">http://vidi005.blogspot.com</a></td>
         </tr>
       </tbody>
     </table>
