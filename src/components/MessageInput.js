@@ -7,13 +7,16 @@ class MessageInput extends React.Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      isFocused: false
     }
     this.formRef = React.createRef()
 
     this.onNameChangeEventHandler = this.onNameChangeEventHandler.bind(this)
     this.onEmailChangeEventHandler = this.onEmailChangeEventHandler.bind(this)
     this.onMessageChangeEventHandler = this.onMessageChangeEventHandler.bind(this)
+    this.onBlurHandler = this.onBlurHandler.bind(this)
+    this.onFocusHandler = this.onFocusHandler.bind(this)
     this.onSubmitEventHandler = this.onSubmitEventHandler.bind(this)
   }
 
@@ -48,6 +51,14 @@ class MessageInput extends React.Component {
         }
       })
     }
+  }
+
+  onBlurHandler () {
+    this.setState({ isFocused: false })
+  }
+
+  onFocusHandler () {
+    this.setState({ isFocused: true })
   }
 
   onSubmitEventHandler (event) {
@@ -99,17 +110,23 @@ class MessageInput extends React.Component {
             placeholder="Enter your name..."
             value={this.state.name}
             onChange={this.onNameChangeEventHandler}
+            onBlur={this.onBlurHandler}
+            onFocus={this.onFocusHandler}
             required
           />
           <br/>
           {
-            this.state.name.length === 50
+            this.state.isFocused
               ? (
-                <label className="text-justify text-red-700" htmlFor="input-name">{nameCharLimit}</label>
+                  this.state.name.length === 50
+                    ? (
+                      <label className="text-justify text-sm text-red-600" htmlFor="input-name">{nameCharLimit}</label>
+                      )
+                    : (
+                      <label className="text-justify text-sm text-gray-500" htmlFor="input-name">{nameCharLimit}</label>
+                      )
                 )
-              : (
-                <label className="text-justify text-gray-500" htmlFor="input-name">{nameCharLimit}</label>
-                )
+              : null
           }
           <br/>
           <input
@@ -119,17 +136,23 @@ class MessageInput extends React.Component {
             placeholder="Enter your e-mail..."
             value={this.state.email}
             onChange={this.onEmailChangeEventHandler}
+            onBlur={this.onBlurHandler}
+            onFocus={this.onFocusHandler}
             required
           />
           <br/>
           {
-            this.state.email.length === 50
+            this.state.isFocused
               ? (
-                <label className="text-justify text-red-700" htmlFor="input-email">{emailCharLimit}</label>
+                  this.state.email.length === 50 || (!this.state.email.includes('@') && this.state.email !== '')
+                    ? (
+                      <label className="text-justify text-sm text-red-600" htmlFor="input-email">{emailCharLimit}</label>
+                      )
+                    : (
+                      <label className="text-justify text-sm text-gray-500" htmlFor="input-email">{emailCharLimit}</label>
+                      )
                 )
-              : (
-                <label className="text-justify text-gray-500" htmlFor="input-email">{emailCharLimit}</label>
-                )
+              : null
           }
           <br/>
           <textarea
@@ -138,17 +161,23 @@ class MessageInput extends React.Component {
             placeholder="Write your message here..."
             value={this.state.message}
             onChange={this.onMessageChangeEventHandler}
+            onBlur={this.onBlurHandler}
+            onFocus={this.onFocusHandler}
             required>
           </textarea>
           <br/>
           {
-            this.state.message.length === 500
+            this.state.isFocused
               ? (
-                <label className="text-justify text-red-700" htmlFor="input-msg">{msgCharLimit}</label>
+                  this.state.message.length === 500
+                    ? (
+                      <label className="text-justify text-sm text-red-600" htmlFor="input-msg">{msgCharLimit}</label>
+                      )
+                    : (
+                      <label className="text-justify text-sm text-gray-500" htmlFor="input-msg">{msgCharLimit}</label>
+                      )
                 )
-              : (
-                <label className="text-justify text-gray-500" htmlFor="input-msg">{msgCharLimit}</label>
-                )
+              : null
           }
           <br/>
           <button
