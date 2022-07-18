@@ -5,7 +5,6 @@ class MessageInput extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      date: '',
       name: '',
       email: '',
       message: ''
@@ -53,16 +52,16 @@ class MessageInput extends React.Component {
 
   onSubmitEventHandler (event) {
     event.preventDefault()
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        date: new Date().toISOString()
-      }
-    })
     const scriptUrl = `${process.env.REACT_APP_MAILING_LIST_API_KEY}`
-    // const form = document.forms['submit-to-google-sheet']
+    Swal.fire({
+      title: 'Sending message...',
+      allowOutsideClick: false
+    }).then(Swal.showLoading())
     fetch(scriptUrl, { method: 'POST', body: new FormData(this.formRef.current) })
-      .then(response => Swal.fire('Message Sent!', `${response.statusText}`, 'success'))
+      .then(response => {
+        Swal.close()
+        Swal.fire('Message Sent!', `${response.statusText}`, 'success')
+      })
       .catch(error => Swal.fire('Send Failed!', `${error.message}`, 'error'))
   }
 
@@ -80,9 +79,9 @@ class MessageInput extends React.Component {
     } else {
       emailCharLimit = `Character remaining: ${50 - this.state.email.length}`
     }
-    // if (!this.state.email.match('@')) {
-    //   emailCharLimit = 'E-mail isn\'t valid!'
-    // }
+    if (!this.state.email.includes('@') && this.state.email !== '') {
+      emailCharLimit = 'E-mail isn\'t valid!'
+    }
     if (this.state.message.length >= 500) {
       msgCharLimit = 'Message is too long'
     } else {
@@ -93,9 +92,9 @@ class MessageInput extends React.Component {
       <div className="message-input tablet:max-w-xl tablet:mx-auto border border-blue-900 rounded-lg m-4 p-4 bg-gray-100 phone:m-2 phone:mt-4 phone:max-w-full">
         <h3>Message Me:</h3>
         <form name="submit-to-google-sheet" method="post" ref={this.formRef} onSubmit={this.onSubmitEventHandler}>
-          <input type="hidden" value={this.state.date} required/>
           <input
             className="input-name w-full p-1 border border-blue-500 rounded-lg mt-2 mb-1"
+            name="Name"
             type="text"
             placeholder="Enter your name..."
             value={this.state.name}
@@ -103,28 +102,54 @@ class MessageInput extends React.Component {
             required
           />
           <br/>
-          <label className="text-justify text-gray-500" htmlFor="input-name">{nameCharLimit}</label>
+          {
+            this.state.name.length === 50
+              ? (
+                <label className="text-justify text-red-700" htmlFor="input-name">{nameCharLimit}</label>
+                )
+              : (
+                <label className="text-justify text-gray-500" htmlFor="input-name">{nameCharLimit}</label>
+                )
+          }
           <br/>
           <input
             className="input-email w-full p-1 border border-blue-500 rounded-lg mt-2 mb-1"
-            type="text"
+            name="E-mail"
+            type="email"
             placeholder="Enter your e-mail..."
             value={this.state.email}
             onChange={this.onEmailChangeEventHandler}
             required
           />
           <br/>
-          <label className="text-justify text-gray-500" htmlFor="input-email">{emailCharLimit}</label>
+          {
+            this.state.email.length === 50
+              ? (
+                <label className="text-justify text-red-700" htmlFor="input-email">{emailCharLimit}</label>
+                )
+              : (
+                <label className="text-justify text-gray-500" htmlFor="input-email">{emailCharLimit}</label>
+                )
+          }
           <br/>
           <textarea
             className="input-msg w-full p-1 border border-blue-500 rounded-lg mt-2 h-40 text-justify"
+            name="Messages"
             placeholder="Write your message here..."
             value={this.state.message}
             onChange={this.onMessageChangeEventHandler}
             required>
           </textarea>
           <br/>
-          <label className="text-justify text-gray-500" htmlFor="input-msg">{msgCharLimit}</label>
+          {
+            this.state.message.length === 500
+              ? (
+                <label className="text-justify text-red-700" htmlFor="input-msg">{msgCharLimit}</label>
+                )
+              : (
+                <label className="text-justify text-gray-500" htmlFor="input-msg">{msgCharLimit}</label>
+                )
+          }
           <br/>
           <button
             className="w-full mt-4 p-2 border border-blue-700 bg-blue-700 hover:bg-blue-900 active:bg-blue-100 text-white active:text-black rounded-lg shadow-md"
