@@ -72,6 +72,14 @@ class MessageInput extends React.Component {
       .then(response => {
         Swal.close()
         Swal.fire('Message Sent!', `${response.statusText}`, 'success')
+        this.setState(prevState => {
+          return {
+            ...prevState,
+            name: '',
+            email: '',
+            message: ''
+          }
+        })
       })
       .catch(error => Swal.fire('Send Failed!', `${error.message}`, 'error'))
   }
