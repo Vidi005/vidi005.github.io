@@ -186,13 +186,19 @@ class MessageInput extends React.Component {
           {
             this.state.isFocused
               ? (
-                  this.state.message.length === 500
-                    ? (
-                      <label className="text-justify text-sm text-red-600" htmlFor="input-msg">{msgCharLimit}</label>
-                      )
-                    : (
-                      <label className="text-justify text-sm text-gray-500" htmlFor="input-msg">{msgCharLimit}</label>
-                      )
+                  <React.Fragment>
+                    {
+                      this.state.message.length === 500
+                        ? (
+                          <label className="text-justify text-sm text-red-600" htmlFor="input-msg">{msgCharLimit}</label>
+                          )
+                        : (
+                          <label className="text-justify text-sm text-gray-500" htmlFor="input-msg">{msgCharLimit}</label>
+                          )
+                      }
+                      <br/>
+                      <span className="text-orange-600 text-sm text-justify"><strong>Warning: </strong>Message which contains any spam, abusive, or promotion words won&apos;t be saved in my database and delivered to my e-mail, even if your message has been sent successfully!</span>
+                  </React.Fragment>
                 )
               : null
           }
