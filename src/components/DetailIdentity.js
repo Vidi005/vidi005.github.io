@@ -30,8 +30,8 @@ const DetailIdentity = () => (
           <td>Cirebon, West Java</td>
         </tr>
         <tr>
-          <th>Blog</th>
-          <td className="px-2">:</td>
+          <th className="align-top">Blog</th>
+          <td className="px-2 align-top">:</td>
           <td><a className="underline hover:text-blue-500 visited:text-purple-900 break-all" href="http://vidi005.blogspot.com">http://vidi005.blogspot.com</a></td>
         </tr>
       </tbody>
