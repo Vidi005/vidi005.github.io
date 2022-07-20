@@ -31,7 +31,7 @@ const getWorkExperienceData = () => [
     company: 'Sekretariat DPRD Kota Cirebon',
     section: 'General Section',
     type: 'Full Time',
-    jobDesc: 'Helping Administrator Jobs, IT Support, Helping make concept of internal office environment Application, Mbuh ra ngenah nyong ge bingung ngarange wk.',
+    jobDesc: 'Helping Administrator Jobs, IT Support, Helping make concept of internal office environment Application.',
     date: 'January 2021 - Now'
   }
 ]
