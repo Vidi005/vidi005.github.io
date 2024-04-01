@@ -178,6 +178,15 @@ const getProjectData = () => [
     repository: 'https://github.com/Vidi005/Submission-Python-Data-Analysis',
     preview: 'https://air-quality-data-analysis.streamlit.app',
     download: ''
+  },
+  {
+    image: '/images/tajweed-recognition.png',
+    name: 'Tajweed Recognition',
+    summary: '(Determining Tajweed from Extracted Arabic Text)',
+    desc: 'Recognizing Arabic Characters from an image and generating Tajweed Colors from recognized text',
+    repository: 'https://github.com/Vidi005/Tajweed-Recognition',
+    preview: 'https://tajweed-recognition.vercel.app/',
+    download: ''
   }
 ]
 
@@ -215,13 +224,6 @@ const getCertificateData = () => [
     date: 'May 2020',
     url: 'https://www.dicoding.com/academies/177/certificates/9672',
     cert: 'images/dasar-visualisasi-data-dicoding.png'
-  },
-  {
-    name: 'Belajar Machine Learning untuk Pemula',
-    issuedBy: 'Dicoding Indonesia',
-    date: 'October 2020',
-    url: 'https://www.dicoding.com/certificates/07Z6LL31WPQR',
-    cert: 'images/machine-learning-pemula-dicoding.png'
   },
   {
     name: 'Belajar Fundamental Aplikasi Android',
@@ -278,7 +280,14 @@ const getCertificateData = () => [
     date: 'October 2023',
     url: 'https://www.dicoding.com/certificates/2VX36VKDJXYQ',
     cert: 'images/analisis-data-dicoding.png'
-  }
+  },
+  {
+    name: 'Belajar Machine Learning untuk Pemula',
+    issuedBy: 'Dicoding Indonesia',
+    date: 'October 2023',
+    url: 'https://www.dicoding.com/certificates/07Z6LL31WPQR',
+    cert: 'images/machine-learning-pemula-dicoding.png'
+  },
 ]
 
 const getContactData = () => [
