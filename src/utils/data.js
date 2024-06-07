@@ -183,7 +183,7 @@ const getProjectData = () => [
     image: '/images/tajweed-recognition.png',
     name: 'Tajweed Recognition',
     summary: '(Determining Tajweed from Extracted Arabic Text)',
-    desc: 'Recognizing Arabic Characters from an image and generating Tajweed Colors from recognized text',
+    desc: 'Extracting Arabic Characters from a document file or an image file, and generating Tajweed Colors from extracted text',
     repository: 'https://github.com/Vidi005/Tajweed-Recognition',
     preview: 'https://tajweed-recognition.vercel.app/',
     download: ''
