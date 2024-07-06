@@ -178,6 +178,15 @@ const getProjectData = () => [
     repository: 'https://github.com/Vidi005/Submission-Python-Data-Analysis',
     preview: 'https://air-quality-data-analysis.streamlit.app',
     download: ''
+  },
+  {
+    image: '/images/tajweed-recognition.png',
+    name: 'Tajweed Recognition',
+    summary: '(Determining Tajweed from Extracted Arabic Text)',
+    desc: 'Extracting Arabic Characters from a document file or an image file, and generating Tajweed Colors from extracted text',
+    repository: 'https://github.com/Vidi005/Tajweed-Recognition',
+    preview: 'https://portfolio-tajweed-recognition.vercel.app/',
+    download: ''
   }
 ]
 
