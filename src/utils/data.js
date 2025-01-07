@@ -63,6 +63,10 @@ const getSkillData = () => ({
         icon: 'images/kotlin-icon.svg'
       },
       {
+        name: 'Dart',
+        icon: 'images/dart-icon.png'
+      },
+      {
         name: 'PHP',
         icon: 'images/php-icon.svg'
       },
@@ -79,6 +83,10 @@ const getSkillData = () => ({
       {
         name: 'Node JS',
         icon: 'images/nodejs-icon.svg'
+      },
+      {
+        name: 'Flutter',
+        icon: 'images/flutter-icon.png'
       }
     ],
     dbs: [
@@ -196,6 +204,15 @@ const getProjectData = () => [
     repository: 'https://github.com/Vidi005/SWAG',
     preview: 'https://swag-preview.pages.dev/',
     download: ''
+  },
+  {
+    image: '/images/muslim-calendar.png',
+    name: 'Muslim Calendar',
+    summary: '(Related Muslim Event/Date Web App)',
+    desc: 'Giving related information of Islamic Calendar, Prayer Times and Imsakiyah Schedule, Moon Crescent Visibility Map, and also Solar and Lunar Eclipses around The World.',
+    repository: 'https://github.com/Vidi005/Muslim-Calendar',
+    preview: 'https://demo-muslim-calendar.pages.dev/',
+    download: ''
   }
 ]
 
@@ -297,6 +314,13 @@ const getCertificateData = () => [
     url: 'https://www.dicoding.com/certificates/07Z6LL31WPQR',
     cert: 'images/machine-learning-pemula-dicoding.png'
   },
+  {
+    name: 'Belajar Membuat Aplikasi Flutter untuk Pemula',
+    issuedBy: 'Dicoding Indonesia',
+    date: 'December 2024',
+    url: 'https://www.dicoding.com/certificates/JMZV4R5ROXN9',
+    cert: 'images/aplikasi-flutter-pemula-dicoding.png'
+  }
 ]
 
 const getContactData = () => [
