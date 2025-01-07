@@ -25,7 +25,7 @@ const Banner = ({ scrollDown }) => (
               .deleteChars(19)
               .changeDelay(40)
               .pauseFor(300)
-              .typeString('Enthusiastic with passions of React JS Web Development and Android Application Development.').pauseFor(1200)
+              .typeString('Enthusiastic with passions of React JS Web Development and Mobile Application Development.').pauseFor(1200)
               .changeDeleteSpeed(1)
               .deleteChars(97)
               .changeDelay(10)
