@@ -213,6 +213,15 @@ const getProjectData = () => [
     repository: 'https://github.com/Vidi005/Muslim-Calendar',
     preview: 'https://demo-muslim-calendar.pages.dev/',
     download: ''
+  },
+  {
+    image: '/images/favorite-restaurant-app.png',
+    name: 'Restaurant App',
+    summary: '(Favorite Restaurant App)',
+    desc: 'Submission of Flutter Fundamental Dicoding Course.',
+    repository: 'https://github.com/Vidi005/Restaurant-App',
+    preview: 'https://dicoding-restaurant-app.netlify.app/',
+    download: ''
   }
 ]
 
@@ -315,11 +324,11 @@ const getCertificateData = () => [
     cert: 'images/machine-learning-pemula-dicoding.png'
   },
   {
-    name: 'Belajar Membuat Aplikasi Flutter untuk Pemula',
+    name: 'Belajar Fundamental Aplikasi Flutter',
     issuedBy: 'Dicoding Indonesia',
-    date: 'December 2024',
-    url: 'https://www.dicoding.com/certificates/JMZV4R5ROXN9',
-    cert: 'images/aplikasi-flutter-pemula-dicoding.png'
+    date: 'February 2025',
+    url: 'https://www.dicoding.com/certificates/GRX53D12VZ0M',
+    cert: 'images/fundamental-flutter-dicoding.png'
   }
 ]
 
