@@ -193,7 +193,7 @@ const getProjectData = () => [
     summary: '(Determining Tajweed from Extracted Arabic Text)',
     desc: 'Extracting Arabic Characters from a document file or an image file, and generating Tajweed Colors from extracted text',
     repository: 'https://github.com/Vidi005/Tajweed-Recognition',
-    preview: 'https://portfolio-tajweed-recognition.vercel.app/',
+    preview: 'https://portfolio-tajweed-recognition.pages.dev/',
     download: ''
   },
   {
@@ -202,7 +202,7 @@ const getProjectData = () => [
     summary: '(Static Website AI Generator)',
     desc: 'Generate front-end static websites and various web UI components through user prompts or image inputs using Gemini AI.',
     repository: 'https://github.com/Vidi005/SWAG',
-    preview: 'https://swag-preview.pages.dev/',
+    preview: 'https://swag-preview.vercel.app/',
     download: ''
   },
   {
