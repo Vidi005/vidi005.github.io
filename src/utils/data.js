@@ -198,11 +198,11 @@ const getProjectData = () => [
   },
   {
     image: '/images/swag.png',
-    name: 'SWAG',
-    summary: '(Static Website AI Generator)',
+    name: 'Static Website AI Generator',
+    summary: 'Web Component Generator',
     desc: 'Generate front-end static websites and various web UI components through user prompts or image inputs using Gemini AI.',
     repository: 'https://github.com/Vidi005/SWAG',
-    preview: 'https://swag-preview.vercel.app/',
+    preview: 'https://static-website-ai-generator.vercel.app/',
     download: ''
   },
   {
