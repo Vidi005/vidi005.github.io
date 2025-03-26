@@ -188,18 +188,9 @@ const getProjectData = () => [
     download: ''
   },
   {
-    image: '/images/tajweed-recognition.png',
-    name: 'Tajweed Recognition',
-    summary: '(Determining Tajweed from Extracted Arabic Text)',
-    desc: 'Extracting Arabic Characters from a document file or an image file, and generating Tajweed Colors from extracted text',
-    repository: 'https://github.com/Vidi005/Tajweed-Recognition',
-    preview: 'https://portfolio-tajweed-recognition.pages.dev/',
-    download: ''
-  },
-  {
     image: '/images/swag.png',
     name: 'Static Website AI Generator',
-    summary: 'Web Component Generator',
+    summary: 'Web Component Generator with Gemini AI',
     desc: 'Generate front-end static websites and various web UI components through user prompts or image inputs using Gemini AI.',
     repository: 'https://github.com/Vidi005/SWAG',
     preview: 'https://static-website-ai-generator.vercel.app/',
