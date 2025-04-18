@@ -164,7 +164,7 @@ const getProjectData = () => [
     image: '/images/personal-notes.png',
     name: 'Personal Notes',
     summary: '(Add, Remove, and Search Notes)',
-    desc: 'Submission of MAking React Web App in Dicoding Course',
+    desc: 'Submission of Making React Web App in Dicoding Course',
     repository: 'https://github.com/Vidi005/Personal-Notes-App',
     preview: 'https://dicoding-submission-web-react-app.netlify.app',
     download: '',
@@ -175,7 +175,7 @@ const getProjectData = () => [
     summary: '(Digital Wedding Invitation Web Based)',
     desc: 'Making Web-Based Digital Invitation. Technologies used: React JS, Tailwind CSS, PHP, and MySQL',
     repository: '',
-    preview: 'https://digiwebinvitation.biz.id',
+    preview: '',
     download: ''
   },
   {
