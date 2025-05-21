@@ -170,15 +170,6 @@ const getProjectData = () => [
     download: '',
   },
   {
-    image: '/images/digiwebinvitation.png',
-    name: 'Digital Web Invitation',
-    summary: '(Digital Wedding Invitation Web Based)',
-    desc: 'Making Web-Based Digital Invitation. Technologies used: React JS, Tailwind CSS, PHP, and MySQL',
-    repository: '',
-    preview: '',
-    download: ''
-  },
-  {
     image: '/images/aqi-data-analysis.png',
     name: 'Air Quality Dashboard',
     summary: '(Air Quality Index Data Analysis on Streamlit)',
