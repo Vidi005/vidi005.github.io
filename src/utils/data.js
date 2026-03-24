@@ -33,9 +33,6 @@ const getWorkExperienceData = () => [
     type: 'Full Time - Contract',
     jobDesc: [
       'IT Support',
-      'Configure and Installing Staff Computers',
-      'Troubleshooting some error of Computer Softwares/Applications',
-      'Participate in Computer Security Incident Response Team (CSIRT) Training at DKIS (Dinas Komunikasi Informatika dan Statistik) in Cirebon City',
       'Helping Administrator Jobs',
       'Helping make concept of internal office environment Application.'
     ],
