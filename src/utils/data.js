@@ -183,7 +183,7 @@ const getProjectData = () => [
     summary: '(Add, Remove, and Search Notes)',
     desc: 'Submission of Making React Web App in Dicoding Course',
     repository: 'https://github.com/Vidi005/Personal-Notes-App',
-    preview: 'https://dicoding-submission-web-react-app.netlify.app',
+    preview: '',
     download: '',
   },
   {
@@ -201,7 +201,7 @@ const getProjectData = () => [
     summary: 'Web Component Generator with Gemini AI',
     desc: 'Generate front-end static websites and various web UI components through user prompts or image inputs using Gemini AI.',
     repository: 'https://github.com/Vidi005/SWAG',
-    preview: 'https://static-website-ai-generator.vercel.app/',
+    preview: '',
     download: ''
   },
   {
@@ -210,7 +210,7 @@ const getProjectData = () => [
     summary: '(Related Muslim Event/Date Web App)',
     desc: 'Giving related information of Islamic Calendar, Prayer Times and Imsakiyah Schedule, Moon Crescent Visibility Map, and also Solar and Lunar Eclipses around The World.',
     repository: 'https://github.com/Vidi005/Muslim-Calendar',
-    preview: 'https://demo-muslim-calendar.pages.dev/',
+    preview: '',
     download: ''
   },
   {
@@ -363,11 +363,6 @@ const getContactData = () => [
     image: '/images/whatsapp.png',
     account: '083823775820',
     url: 'https://wa.me/+6283823775820'
-  },
-  {
-    image: '/images/twitter.png',
-    account: 'VidiHidarlan',
-    url: 'https://twitter.com/VidiHidarlan'
   }
 ]
 
